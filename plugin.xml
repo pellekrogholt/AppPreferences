@@ -24,13 +24,14 @@
  	<js-module src="src/ios/applicationPreferences.js" name="applicationPreferences">
               <clobbers target="applicationPreferences" />
         </js-module>
-		
+
         <config-file target="config.xml" parent="plugins">
-		<plugin name="applicationPreferences" value="applicationPreferences" />
+               <feature name="applicationPreferences">
+                    <param name="ios-package" value="applicationPreferences"/>
+               </feature>
         </config-file>
 
         <header-file src="src/ios/applicationPreferences.h" />
-
         <source-file src="src/ios/applicationPreferences.m"  />
 
     </platform>
